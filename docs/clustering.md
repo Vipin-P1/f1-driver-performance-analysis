@@ -1,17 +1,28 @@
-Clustering
-Clustering is a method used to identify patterns and group data based on shared characteristics. It has been extensively applied in diverse fields to simplify comparisons and reveal meaningful insights. In this study, clustering is applied to analyse Formula One driver and constructor performance using metrics such as qualifying times, race results, and consistency. By uncovering hidden structures in the data, clustering enables better understanding of performance trends and supports future decision-making regarding driver evaluation and team strategy. The two clustering techniques used in this research are K-Medoids and OPTICS.
-K-Medoids
-K-Medoids was chosen for its resilience to outliers, which is critical given the presence of irregular data points in F1 performance metrics. Unlike K-Means, which calculates cluster centres using mean values, K-Medoids selects actual data points as cluster centres, making it less sensitive to extreme values and ensuring more robust clustering results.
-The table below shows the K-Medoids iteration scores for different proximity measures and K-values.
-![K-Medoids K-value iteration scores](f1-driver-performance-analysis/outputs/tables/K-Medoids Proximity measure scores.jpg)
-![Silhouette Index Chart & Elbow Curve](outputs/visuals/Silhouette Index chart & Elbow Curve.jpg)
-Based on pre-processing findings, Cosine proximity emerged as the most suitable measure for this dataset. The silhouette index results in the image above demonstrate that Cosine consistently achieved higher scores across iterations, while the elbow chart confirms that K=3 is the optimal number of clusters. Additionally, the validity indices table below compares the Silhouette Index, Davies-Bouldin Index, and Inertia (WCSS) for the selected clusters.
+## Clustering
+
+Clustering, a method for identifying patterns and grouping data based on shared characteristics, has been widely applied in diverse fields (1). In this research, clustering is used to analyse driver and constructor performance in Formula One, focusing on metrics such as qualifying times, race results, and driver consistency. This approach enables comparisons across drivers and reveals insights that guide future performance assessments. K-Medoids and OPTICS were chosen for this study due to their suitability for handling outliers and complex data patterns.
+
+### K-Medoids
+
+K-Medoids is selected primarily for its resilience to outliers, which is crucial for this dataset. Unlike K-Means, which uses mean values to define cluster centres, K-Medoids uses actual data points, making it more reliable when outliers are present.
+
+![K-Medoids K-value iteration scores](f1-driver-performance-analysis/outputs/tables/K-Medoids Proximity measure scores.jpg)  
+![Silhouette chart and Elbow chart](outputs/visuals/Silhouette Index chart & Elbow Curve.jpg)
+
+Based on pre-processing, Cosine proximity emerged as the most suitable measure. The silhouette index results show that Cosine consistently achieves higher scores, and the elbow chart validates that K=3 is the optimal clustering solution.  
+
 ![Validity Indices](outputs/tables/Validity Indices.jpg)
-An ideal clustering outcome is defined by a high Silhouette score, a low Davies-Bouldin Index, and reduced Inertia, ensuring clusters are both cohesive and well-separated. For this dataset, K=3 yielded a Silhouette score of 0.57 and a Davies-Bouldin Index of 1.13, confirming that three distinct clusters effectively capture driver performance patterns.
-OPTICS
-OPTICS (Ordering Points To Identify the Clustering Structure) is a density-based clustering method capable of detecting clusters with varying densities and irregular shapes. Unlike K-Medoids, it does not require the number of clusters to be specified beforehand, making it suitable for discovering complex patterns in real-world data. OPTICS is also robust to noise and outliers, which adds flexibility for datasets like Formula One race metrics.
-The table below shows the iterations of Minimum Points (MinPts) and Epsilon tested for OPTICS:
+
+An ideal clustering outcome is characterized by a higher Silhouette score, a lower Davies-Bouldin Index, and reduced Inertia (WCSS). In this study, K=3 achieved a silhouette score of 0.57 and a Davies-Bouldin Index of 1.13. Unlike WCSS alone, which emphasizes compactness, these combined metrics ensure clusters are cohesive and well-separated, making them appropriate for analyzing Formula One driver performance.
+
+### OPTICS
+
+OPTICS is a density-based algorithm capable of handling clusters of varying densities and irregular shapes, common in Formula One data. It does not require predefined cluster numbers and is robust to noise and outliers, making it adaptable for real-world datasets.
+
 ![OPTICS Proximity Index](outputs/tables/OPTICS Proximity based iterations.jpg)
-By analyzing these iterations, the optimal clustering result was achieved with K=3, using MinPts = 80 and Epsilon = 0.06. This setting provides a strong balance between coverage and cluster quality, ensuring that at least 80% of drivers are included in well-defined clusters.
+
+By testing different values of Minimum Points (MinPts) and Epsilon, the optimal clustering result was again K=3, with MinPts set to 80 and Epsilon at 0.06. This configuration balances strong clustering scores with coverage of at least 80% of the data.
+
 ![Reachability Plot](outputs/visuals/Reachability Plot.jpg)
-The reachability plot above visualizes the cluster structure for K=3. Dense areas indicate groups of drivers with similar performance characteristics, while drivers in sparse areas represent noise or outliers. The plot confirms the presence of three coherent clusters, validating the clustering approach and supporting the segmentation of drivers based on race performance.
+
+The reachability plot for K=3 shows clusters based on data point density. Densely packed areas indicate strong performance groupings, while sparse points are considered noise or outliers. This confirms the presence of three distinct and coherent clusters in the dataset.
