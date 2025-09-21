@@ -27,5 +27,9 @@ While the findings are valuable, several limitations must be acknowledged:
 - **Race strategy**: Pit stop strategy, tire management, and in-race decisions can significantly affect outcomes, yet they were outside the scope of this analysis.  
 - **External influences**: Track conditions, regulatory changes, and other environmental variables were not considered, despite evidence that they play a major role in competitive dynamics.  
 
-### Future Work  
-Future research should integrate these additional dimensions—technical, tactical, physiological, and external factors—to deliver a richer, more holistic view of driver and team performance. Doing so will not only improve predictive accuracy but also provide insights with greater strategic value for teams, drivers, and sponsors.
+### Next Steps  
+This analysis focused mainly on lap times, pit stops, and qualifying data. Factors such as car engineering, team tactics, and external conditions (weather, tire wear) were not considered here. Adding these would make the model stronger. If you’d like to contribute, possible directions include:
+
+- Expanding the dataset with car specifications and penalty data
+- Adding team strategy variables (pit stop calls, tire choices)
+- Exploring the role of physical fitness and driver characteristics
