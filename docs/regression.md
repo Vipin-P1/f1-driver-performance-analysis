@@ -36,13 +36,13 @@ AvgLapTimeSeconds = -2.61
                   + 0.064 * Qualifying1Seconds  
                   + 0.301 * AvgPitDuration  
                   - 0.201 * FastestPitstop
-
+```
 
 ![Normal P-P Plot](https://github.com/Vipin-P1/f1-driver-performance-analysis/blob/main/outputs/visuals/Normal%20P-P%20Plot%20Regression.jpg)
 
 The **Normal Probability Plot** confirmed that residuals followed an approximately normal distribution, validating the model despite the autocorrelation concern.  
 
-```
+---
 
 ### Non-Linear Regression (SPSS)
 
