@@ -1,6 +1,6 @@
 ## Classification
 
-Classification is a **supervised learning** technique that assigns data points to predefined categories based on input features. It is widely used to uncover patterns and predict outcomes in various domains, including loan approval systems (2) and medical diagnosis (3). In this study, classification is applied to **predict a driver’s likelihood of earning a podium finish** based on historical performance metrics such as qualifying lap times, race results, and pit stop durations. By creating a predictive model, this approach can help teams anticipate potential race outcomes and identify high-performing drivers.
+Classification is a **supervised learning** technique that assigns data points to predefined categories based on input features. It is widely used to uncover patterns and predict outcomes in various domains, including loan approval systems and medical diagnosis. In this study, classification is applied to **predict a driver’s likelihood of earning a podium finish** based on historical performance metrics such as qualifying lap times, race results, and pit stop durations. By creating a predictive model, this approach can help teams anticipate potential race outcomes and identify high-performing drivers.
 
 ![Classification Validity Scores](https://github.com/Vipin-P1/f1-driver-performance-analysis/blob/main/outputs/tables/Classification%20Methods%20-%20Validity%20Scores.jpg)
 
